@@ -1,0 +1,189 @@
+:root{
+    --light-gray:rgb(246, 253, 255); 
+
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* BODY css applied to whole body of page */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:var(--bgcolor);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    min-height: 100vh;
+    
+  }
+  
+  /* <main> */
+  main {
+    width: 60%;
+    margin: 0px auto;
+    background-color:var(--light-gray);
+    /* border: 4px solid #393b4f; */
+  }
+  
+  
+  
+/* header css */
+header {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    background-color:rgb(10, 51, 112);
+    color: #ffffff;
+    padding: 10px  ;
+}
+
+/* header level 1 CSS */
+h1 {
+    display: inline-block;
+    font-size: 35px;
+    
+}
+
+/* Navigation and its anchor tag CSS */
+.navMenu {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    text-decoration: underline;
+    
+}
+
+nav  a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+}
+.banner{
+    background-image: url("../images/bgBanner.jpg");
+    height: 300px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-size: cover;
+    background-position: center;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+}
+.banner h2 {
+    color:black;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    padding: 10px;
+  }
+  
+.workgrid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-auto-flow: dense;
+    grid-gap: 15px;
+    min-height: 400px;
+}
+
+.workgrid-item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    border: 5px solid lightblue;
+    border-radius: 5px;
+    font-size: 12px;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+    
+  /* for text center */
+    /* align-items: center; */
+    
+  }
+
+.item-1 {
+    grid-row: span 3;
+    grid-column: span 2;
+    background-image: url("../images/surf.jpeg"); 
+    opacity: 0.3;
+}
+.item-2{
+    background-image: url("../images/website-coding.png");
+}
+.item-3{
+    background-image: url("../images/website-coding.png");
+}
+.item-4{
+    background-image: url("../images/website-coding.png");
+}
+.item-5{
+    background-image: url("../images/website-coding.png");
+}
+.groupImage{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    border: 5px solid lightblue;
+    border-radius: 5px;
+    font-size: 12px;
+    
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.flex-items{
+    
+    padding: 10px;
+    font-size: 15px;  
+    min-width: 40px;
+    opacity: 1.0;
+    background-color: lightblue;
+    /* puts space between each one vertically */
+    margin-bottom: 15px;
+    /* tells background to fit box no matter what */
+    background-size: cover;
+    /* sets minimum height value so there's room */
+    min-height: 40px;
+    position: absolute;
+
+  
+}
+
+.workgrid-item:hover{
+    opacity: 1.0;
+                    
+}
+.groupSection
+{
+    display: inline-flex;
+    width: 100%; 
+    margin:10px 0;
+}
+#contentSection{
+   padding: 0 50px 50px;
+}
+.content {
+    width: 100%;
+    margin-left: 20px;
+}
+.groupTitle{
+    text-align: right;
+    width: 120px;
+    border-right: 4px solid #393b4f;
+    padding-right: 10px;
+
+}
+.linksDetail{
+    display: inline-flex;
+    justify-content: space-between;
+}
+

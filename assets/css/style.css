@@ -2,48 +2,49 @@
     --light-gray:rgb(246, 253, 255); 
     --light-pink:rgb(252 252 252); 
     --gray-shade:rgb(65 60 64 / 88%);   
+    --maxinumWidth:100%;
+    --generalFontFamily:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-* {
+*,  *:before,
+*:after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-/* BODY css applied to whole body of page */
+/********** BODY css applied to whole body of page */
 body {
     margin: 0;
     padding: 0;
     background-color:var(--bgcolor);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: var (--generalFontFamily);
     font-size: small;
     min-height: 100vh;
     
   }
-  
-  /* <main> */
-  main {
+
+/********* <main> *******/
+main {
     width: 60%;
     margin: 0px auto;
     background-color:var(--light-gray);
     /* border: 4px solid #393b4f; */
-  }
+}
   
-  
-  
-/* header css */
+/********** header css *******/
 header {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+   
     background-color:var(--light-pink);
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    width: var(--maxinumWidth);
     padding: 10px  ;
 }
 /* Navigation and its anchor tag CSS */
 .navMenu {
     padding-top: 15px;
     margin-right: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';    
+    
 }
 
 nav a {
@@ -62,11 +63,11 @@ nav a:hover{
 h1 {
     display: inline-block;  
 }
-/* Banner section starts */
+/********** Banner section starts *******/
 .banner
 {
     height: 400px;
-    width: 100%;
+     width: var(--maxinumWidth);
     background-color:var(--light-pink);
     display: inline-flex;
     align-items: center;
@@ -82,25 +83,25 @@ img{
  .bannerText   {
     color: var(--gray-shade);
     text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     align-self: flex-end;
     font-family: cursive;
 }
 .bannerText h1::first-letter{
     color: red;
     font-weight: 900;
-    font-size:50px;
+    font-size:60px;
     font-family: cursive;
 }
 
-/* Content section starts */
+/********** Content section starts *******/
 #contentWrapper{
     padding: 0 50px 50px;
 }
 .contentSection
 {
     display: inline-flex;
-    width: 100%; 
+    width: var(--maxinumWidth); 
     margin:10px 0;
 }
 .contextHeader{
@@ -111,8 +112,13 @@ img{
     color: var(--gray-shade);
     font-size: 20px;
 }
+.contextHeader h1::first-letter{
+    font-weight: 900;
+    font-size:40px;
+    
+}
 .contentDetail {
-    width: 100%;
+     width: var(--maxinumWidth);
     margin-left: 20px;
 }
 .contentDetail p{
@@ -121,7 +127,7 @@ img{
     padding: 10px;
 
 }
-/* Grid Css Control starts */
+/********** Grid Css Control starts *******/
 .workgrid-wrapper{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -133,7 +139,7 @@ img{
 /* set all workgrid items css */
 .workgrid-item {
     display: flex;
-    width: 100%;
+     width: var(--maxinumWidth);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -167,26 +173,25 @@ img{
 }
 .item-1 {
     background-image: url("../images/horiseon.png"); 
-    width: 100%;   
+     width: var(--maxinumWidth);   
 }
 
 .item-2{
     background-image: url("../images/surf.jpeg");
-    width: 100%;  
+     width: var(--maxinumWidth);  
 }
 .item-3{
     background-image: url("../images/calculator.jpeg");
-    width: 100%;  
+     width: var(--maxinumWidth);  
 }
 .item-4{
     background-image: url('https://via.placeholder.com/1000/393b4f/fb3e55?text=Placeholder');
-    width: 100%;  
+     width: var(--maxinumWidth);  
 }
 .item-5{
     background-image: url('https://via.placeholder.com/1000/393b4f/fb3e55?text=Placeholder');
-    width: 100%;  
+     width: var(--maxinumWidth);  
 }
-
 .workgrid-item:hover{
     opacity: 1;
 }
@@ -195,7 +200,7 @@ img{
 }
 .linksDetail{
     display: inline-flex;
-    justify-content: flex-start
+    justify-content: flex-start;
 }
 .linksDetail a:hover{
     text-decoration: underline;
@@ -203,3 +208,20 @@ img{
     font-size: larger;
 }
 
+ 
+
+/* Width at 600px and below */
+@media screen and (max-width: 600px) {
+
+    main {
+      /* Box-model */
+      width: var(--maxinumWidth);
+      padding: 10px;
+      
+    }
+    #contentWrapper
+    {
+       width: var(--maxinumWidth);
+    }
+  }
+  

@@ -1,6 +1,7 @@
 :root{
     --light-gray:rgb(246, 253, 255); 
-
+    --light-pink:rgb(252 252 252); 
+    --gray-shade:rgb(65 60 64 / 88%);   
 }
 * {
     box-sizing: border-box;
@@ -9,12 +10,11 @@
 }
 
 /* BODY css applied to whole body of page */
-
 body {
     margin: 0;
     padding: 0;
     background-color:var(--bgcolor);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: small;
     min-height: 100vh;
     
@@ -33,52 +33,96 @@ body {
 /* header css */
 header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
-    background-color:rgb(10, 51, 112);
-    color: #ffffff;
+    background-color:var(--light-pink);
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
     padding: 10px  ;
 }
-
-/* header level 1 CSS */
-h1 {
-    display: inline-block;
-    font-size: 35px;
-    
-}
-
 /* Navigation and its anchor tag CSS */
 .navMenu {
     padding-top: 15px;
     margin-right: 20px;
-    float: right; 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
-    text-decoration: underline;
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';    
 }
 
-nav  a {
-    color: #ffffff;
+nav a {
+    color: var(--gray-shade);
     text-decoration: none;
     margin-left: 25px;
+    font-size: medium;
 }
-.banner{
-    background-image: url("../images/bgBanner.jpg");
-    height: 300px;
+/* Hover pseudo Class applied to Menu items */
+nav a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: larger;
+}
+/* header level 1 CSS */
+h1 {
+    display: inline-block;  
+}
+/* Banner section starts */
+.banner
+{
+    height: 400px;
     width: 100%;
-    margin-bottom: 25px;
-    background-size: cover;
-    background-position: center;
+    background-color:var(--light-pink);
     display: inline-flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("../images/bgBanner.jpg");
+    padding: 50px;
 }
-.banner h2 {
-    color:black;
+/* Self Image CSS */
+img{
+    height: 350px;
+    width: 220px;
+ }
+ .bannerText   {
+    color: var(--gray-shade);
     text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    margin-bottom: 50px;
+    align-self: flex-end;
+    font-family: cursive;
+}
+.bannerText h1::first-letter{
+    color: red;
+    font-weight: 900;
+    font-size:50px;
+    font-family: cursive;
+}
+
+/* Content section starts */
+#contentWrapper{
+    padding: 0 50px 50px;
+}
+.contentSection
+{
+    display: inline-flex;
+    width: 100%; 
+    margin:10px 0;
+}
+.contextHeader{
+    text-align: right;
+    width: 200px;
+    border-right: 4px solid rgba(109, 100, 108, 0.877);
+    padding-right: 10px;
+    color: var(--gray-shade);
+    font-size: 20px;
+}
+.contentDetail {
+    width: 100%;
+    margin-left: 20px;
+}
+.contentDetail p{
+    color: var(--gray-shade);
+    font-size: 15px;
     padding: 10px;
-  }
-  
-.workgrid-container{
+
+}
+/* Grid Css Control starts */
+.workgrid-wrapper{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
@@ -86,45 +130,17 @@ nav  a {
     grid-gap: 15px;
     min-height: 400px;
 }
-
+/* set all workgrid items css */
 .workgrid-item {
     display: flex;
-    align-items: flex-start;
-    flex-direction: column-reverse;
-    border: 5px solid lightblue;
-    border-radius: 5px;
-    font-size: 12px;
-    
-    /* Center and scale the image nicely */
+    width: 100%;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
-    
-    
-  /* for text center */
-    /* align-items: center; */
-    
-  }
-
-.item-1 {
-    grid-row: span 3;
-    grid-column: span 2;
-    background-image: url("../images/surf.jpeg"); 
     opacity: 0.3;
 }
-.item-2{
-    background-image: url("../images/website-coding.png");
-}
-.item-3{
-    background-image: url("../images/website-coding.png");
-}
-.item-4{
-    background-image: url("../images/website-coding.png");
-}
-.item-5{
-    background-image: url("../images/website-coding.png");
-}
+/* grouped image div with anchor tag */
 .groupImage{
     position: relative;
     display: flex;
@@ -133,54 +149,59 @@ nav  a {
     border: 5px solid lightblue;
     border-radius: 5px;
     font-size: 12px;
+   
     
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+/* Center and scale the image nicely */
 }
 .flex-items{
-    
+    position: absolute;
     padding: 10px;
     font-size: 15px;  
-    min-width: 40px;
-    opacity: 1.0;
     background-color: lightblue;
     /* puts space between each one vertically */
     margin-bottom: 15px;
     /* tells background to fit box no matter what */
     background-size: cover;
     /* sets minimum height value so there's room */
-    min-height: 40px;
-    position: absolute;
+ 
+}
+/* separate CSS created for span , to avoid issue for flex-items */
+.item1{
+    grid-row: 1/ span 2;
+    grid-column: 1/ span 2;
+}
+.item-1 {
+    background-image: url("../images/horiseon.png"); 
+    width: 100%;   
+}
 
-  
+.item-2{
+    background-image: url("../images/surf.jpeg");
+    width: 100%;  
+}
+.item-3{
+    background-image: url("../images/calculator.jpeg");
+    width: 100%;  
+}
+.item-4{
+    background-image: url('https://via.placeholder.com/1000/393b4f/fb3e55?text=Placeholder');
+    width: 100%;  
+}
+.item-5{
+    background-image: url('https://via.placeholder.com/1000/393b4f/fb3e55?text=Placeholder');
+    width: 100%;  
 }
 
 .workgrid-item:hover{
-    opacity: 1.0;
-                    
+    opacity: 1;
 }
-.groupSection
-{
-    display: inline-flex;
-    width: 100%; 
-    margin:10px 0;
-}
-#contentSection{
-   padding: 0 50px 50px;
-}
-.content {
-    width: 100%;
-    margin-left: 20px;
-}
-.groupTitle{
-    text-align: right;
-    width: 120px;
-    border-right: 4px solid #393b4f;
-    padding-right: 10px;
 
+.flex-items h4{
+    color: var(--gray-shade);
+}
+.flex-items p{
+    color: var(--gray-shade);
+    font-size: 12px;
 }
 .linksDetail{
     display: inline-flex;

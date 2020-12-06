@@ -156,14 +156,9 @@ img{
 .flex-items{
     position: absolute;
     padding: 10px;
-    font-size: 15px;  
+    font-size: 20px;  
     background-color: lightblue;
-    /* puts space between each one vertically */
-    margin-bottom: 15px;
-    /* tells background to fit box no matter what */
-    background-size: cover;
-    /* sets minimum height value so there's room */
- 
+    color: var(--gray-shade);
 }
 /* separate CSS created for span , to avoid issue for flex-items */
 .item1{
@@ -195,16 +190,16 @@ img{
 .workgrid-item:hover{
     opacity: 1;
 }
-
-.flex-items h4{
-    color: var(--gray-shade);
-}
 .flex-items p{
-    color: var(--gray-shade);
     font-size: 12px;
 }
 .linksDetail{
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: flex-start
+}
+.linksDetail a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: larger;
 }
 

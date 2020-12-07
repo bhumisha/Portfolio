@@ -4,6 +4,9 @@
     --gray-shade:rgb(65 60 64 / 88%);   
     --maxinumWidth:100%;
     --generalFontFamily:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --headerFontSize:20px;
+    --FontSizeMedium:15px;
+    
 }
 *,  *:before,
 *:after {
@@ -18,7 +21,6 @@ body {
     padding: 0;
     background-color:var(--bgcolor);
     font-family: var (--generalFontFamily);
-    font-size: small;
     min-height: 100vh;
     
   }
@@ -51,13 +53,12 @@ nav a {
     color: var(--gray-shade);
     text-decoration: none;
     margin-left: 25px;
-    font-size: medium;
+    font-size: var(--FontSizeMedium);
 }
 /* Hover pseudo Class applied to Menu items */
 nav a:hover{
     text-decoration: underline;
     font-weight: bold;
-    font-size: larger;
 }
 /* header level 1 CSS */
 h1 {
@@ -110,7 +111,7 @@ img{
     border-right: 4px solid rgba(109, 100, 108, 0.877);
     padding-right: 10px;
     color: var(--gray-shade);
-    font-size: 20px;
+    font-size: var(--headerFontSize);
 }
 .contextHeader h1::first-letter{
     font-weight: 900;
@@ -123,7 +124,7 @@ img{
 }
 .contentDetail p{
     color: var(--gray-shade);
-    font-size: 15px;
+    font-size: var(--FontSizeMedium);
     padding: 10px;
 
 }
@@ -134,12 +135,12 @@ img{
     grid-template-rows: repeat(3,1fr);
     grid-auto-flow: dense;
     grid-gap: 15px;
-    min-height: 400px;
+    min-height: 450px;
 }
 /* set all workgrid items css */
 .workgrid-item {
     display: flex;
-     width: var(--maxinumWidth);
+    width: var(--maxinumWidth);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -154,7 +155,7 @@ img{
     flex-direction: column-reverse;
     border: 5px solid lightblue;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: var(--contentFontSize);
    
     
 /* Center and scale the image nicely */
@@ -162,7 +163,7 @@ img{
 .flex-items{
     position: absolute;
     padding: 10px;
-    font-size: 20px;  
+    font-size: var(--FontSizeMedium);
     background-color: lightblue;
     color: var(--gray-shade);
 }
@@ -196,19 +197,17 @@ img{
     opacity: 1;
 }
 .flex-items p{
-    font-size: 12px;
+    font-size: var(--FontSizeMedium);
 }
 .linksDetail{
     display: inline-flex;
     justify-content: flex-start;
+    align-items: center;
 }
 .linksDetail a:hover{
     text-decoration: underline;
     font-weight: bold;
-    font-size: larger;
 }
-
- 
 
 /* Width at 600px and below */
 @media screen and (max-width: 600px) {

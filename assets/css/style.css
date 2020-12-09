@@ -135,7 +135,7 @@ img{
     grid-template-rows: repeat(3,1fr);
     grid-auto-flow: dense;
     grid-gap: 15px;
-    min-height: 450px;
+    min-height: 450px; 
 }
 /* set all workgrid items css */
 .workgrid-item {
@@ -215,6 +215,7 @@ img{
     main {
       /* Box-model */
       width: var(--maxinumWidth);
+      height:80%;
       padding: 10px;
       
     }
@@ -229,7 +230,8 @@ img{
 
     body, main {
       /* Box-model */
-      width: 100%;
+      width: var(--maxinumWidth);
+      height:80%;
       padding: 10px;
       
     }

@@ -119,7 +119,7 @@ img{
     
 }
 .contentDetail {
-     width: var(--maxinumWidth);
+     width: 800px;
     margin-left: 20px;
 }
 .contentDetail p{
@@ -208,7 +208,7 @@ img{
     text-decoration: underline;
     font-weight: bold;
 }
-
+  
 /* Width at 600px and below */
 @media screen and (max-width: 600px) {
 

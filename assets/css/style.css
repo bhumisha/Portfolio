@@ -27,7 +27,7 @@ body {
 
 /********* <main> *******/
 main {
-    width: 60%;
+    width: 1000px;
     margin: 0px auto;
     background-color:var(--light-gray);
     /* border: 4px solid #393b4f; */
@@ -215,6 +215,21 @@ img{
     main {
       /* Box-model */
       width: var(--maxinumWidth);
+      padding: 10px;
+      
+    }
+    #contentWrapper
+    {
+       width: var(--maxinumWidth);
+    }
+  }
+
+  /* Width at 600px and below */
+@media screen and (max-width: 320px) {
+
+    body, main {
+      /* Box-model */
+      width: 100%;
       padding: 10px;
       
     }

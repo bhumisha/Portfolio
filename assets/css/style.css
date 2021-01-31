@@ -172,13 +172,13 @@ img{
     grid-row: 1/ span 2;
     grid-column: 1/ span 2;
 }
-.item-1 {
+.item-2 {
     background-image: url("../images/horiseon.png"); 
      width: var(--maxinumWidth);   
 }
 
-.item-2{
-    background-image: url("../images/surf.jpeg");
+.item-1{
+    background-image: url("../images/ThreesaCrowd.png");
      width: var(--maxinumWidth);  
 }
 .item-3{
